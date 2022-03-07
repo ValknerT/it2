@@ -26,6 +26,9 @@
 
     </div>
 
+    <form id="slettast">
+        <button type="submit">Slette</button>
+    </form>
     <!-- Kode -->
     <script> 
         var ut = document.getElementById("ut");
@@ -143,6 +146,12 @@
         skrivUtArray(eleverMedOver5Ny,"Ny test:");
 
         // Forsøk å slett ein elev, gitt navnet til denne:
+
+        let slett = document.getElementById("slettast")
+        slett.addEventListener("submit",sletter)
+
+
+    function sletter(){
         let kvenSkalSlettast = prompt("Kven vil du slette?").toUpperCase();
         for (let i=0; i < elevene.length; i++) {
             if(elevene[i].navn.toUpperCase() === kvenSkalSlettast) {
@@ -161,6 +170,9 @@
         }*/
         elevene = elevene.filter(elev => elev.navn != 'jojojojo');
         skrivUtArray(elevene,"Navn - etter sletting av jojojojo");
+        console.log(elevene);
+    }
+
     </script>
 </body>
 
