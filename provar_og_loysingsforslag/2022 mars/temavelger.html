@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="temavelger.css">
 </head>
 <body>
-    <select>
-        <option>Dark (standard)</option>
-        <option>Light</option>
+    <!-- HTML -->
+    <select name="temavelger" id="selectTemavelger">
+        <option name="dark"  value="0">Dark (standard)</option>
+        <option name="light" value="1">Light</option>
     </select>
 
-    <form>
-        <input>
-        <input>
-        <input>
-        <button>Registrer tema</button>
+    <form id="registrerTema">
+        <label for="fargeTekst">Tekstfarge</label>
+        <input id="fargeTekst" type="color" value="#ffffff" required>
+        <label for="fargeBakgrunn">Bakgrunnsfarge</label>
+        <input id="fargeBakgrunn" type="color" value="000000" required>
+        <label for="fargeUtheva">Utheva</label>
+        <input id="fargeUtheva" type="color" value="#ffff00" required>
+        <button type="submit">Registrer tema</button>
     </form>
 
     <!-- Dette er delen du skal gjere stilendringar på. -->
@@ -32,6 +36,7 @@
     </div>
     <!-- Ferdig med delen du skal gjere stilendringar på. -->
 
-    <script src=""></script>
+    <!-- Javascript -->
+    <script src="temavelger.js"></script>
 </body>
 </html>
